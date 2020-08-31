@@ -10,7 +10,8 @@ RUN apk add --no-cache --update git \
 
 RUN go get github.com/markbates/pkger/cmd/pkger \
     && pkger -include $(pwd)/template \
-    && cd cmd/ && go install -v
+    && cd cmd/ \
+    && go install -v
 
 FROM alpine:3.12
 LABEL maintainer="mario@mvochoa.com"

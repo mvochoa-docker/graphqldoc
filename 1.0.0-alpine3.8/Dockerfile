@@ -11,7 +11,8 @@ RUN apk add --no-cache --update git \
 RUN go get github.com/go-bindata/go-bindata/... \
     && go-bindata -o assets.go template/ \
     && sed -i 's/package\ main/package\ graphqldoc/g' assets.go \
-    && cd cmd/ && GO111MODULE=on go install -v
+    && cd cmd/ \
+    && GO111MODULE=on go install -v
 
 FROM alpine:3.8
 LABEL maintainer="mario@mvochoa.com"
