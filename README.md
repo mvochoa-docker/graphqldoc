@@ -1,6 +1,6 @@
-# Docker compose
+# Graphql Documentation
 
-Docker images with docker-compose
+Docker images with graphqldoc
 
 ## Supported tags and respective Dockerfile links
 
