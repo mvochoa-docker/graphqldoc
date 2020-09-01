@@ -23,25 +23,25 @@
 graphqldoc:latest:
   extends: .docker
   before_script:
-    - cd 2.0.0-alpine3.12/
+    - cd 2.1.0-alpine3.12/
   only:
     refs:
       - master
     changes:
-      - 2.0.0-alpine3.12/*
-      - 2.0.0-alpine3.12/**/*
+      - 2.1.0-alpine3.12/*
+      - 2.1.0-alpine3.12/**/*
 
-graphqldoc:2.0.0-alpine3.12:
+graphqldoc:2.1.0-alpine3.12:
   extends: .docker
   before_script:
-    - cd 2.0.0-alpine3.12/
-    - set -- 2.0.0 2.0.0-alpine
+    - cd 2.1.0-alpine3.12/
+    - set -- 2 2-alpine
   only:
     refs:
       - master
     changes:
-      - 2.0.0-alpine3.12/*
-      - 2.0.0-alpine3.12/**/*
+      - 2.1.0-alpine3.12/*
+      - 2.1.0-alpine3.12/**/*
 
 graphqldoc:1.0.0-alpine3.8:
   extends: .docker
