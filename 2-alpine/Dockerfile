@@ -1,6 +1,6 @@
 FROM golang:alpine3.12 AS builder
 
-ENV VERSION_GRAPHQLDOC=2.1.0
+ENV VERSION_GRAPHQLDOC=2.2.0
 
 WORKDIR /go/src/github.com/mvochoa/graphqldoc
 
